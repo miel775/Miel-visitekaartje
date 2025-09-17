@@ -35,13 +35,7 @@ html {
     grid-template-rows: 50% 50%;
     padding: 1em;
 
-    @media (max-width: 600px) {
-        border-radius: var(--border-radius-mobile);
-        width: 300px;
-        height: 400px;
-        grid-template-columns: 100%;
-        grid-template-rows: 33% 33% 33%;
-    }
+
 
     svg:nth-of-type(1) {
         grid-column-start: 1;
