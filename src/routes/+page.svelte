@@ -6,17 +6,10 @@
     import Card from "$lib/componenten/card.svelte";
     import Mill from "$lib/componenten/mill.svelte";
     import TreeDarkgreen from "$lib/componenten/tree-darkgreen.svelte";
-
 </script>
 
 
 <Card size={1} className="card-front">
-
-    <Logo />
-
-    <Drawing />
-
-    <Miel />
 
 </Card>
 
@@ -24,10 +17,6 @@
 <div class="trees">
     <TreeDarkgreen />
 </div>
-
-
-<Card size={1} className="card-back">
-</Card>
 
 <style>
     :root {
@@ -43,12 +32,14 @@
     --border-radius-mobile: 45px;
 }
 
+
 :global(body) {
     background-color: var(--primary-color);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Garet', sans-serif;
 }
 
 .trees {
