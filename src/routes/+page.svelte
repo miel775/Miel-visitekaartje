@@ -9,14 +9,10 @@
 </script>
 
 
-<Card size={1} className="card-front">
+<Card size={1}>
 
 </Card>
 
-<Mill />
-<div class="trees">
-    <TreeDarkgreen />
-</div>
 
 <style>
     :root {
@@ -39,7 +35,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Garet', sans-serif;
 }
 
 .trees {

@@ -13,6 +13,7 @@
 <div class="card">
     <div class="card-inner">
         <div class="card-front">
+            <h1>Miel van Sleeuwen</h1>
             <Logo />
             <Drawing />
             <Miel />
@@ -22,6 +23,12 @@
             <h2>Miel van Sleeuwen</h2>   
             <p>Webdeveloper & Designer</p>
 
+            <div class="line"></div>
+
+            <a href="www.mielvansleeuwen.nl"></a>
+            <a href="www.github.com/miel775"></a>
+            <a href="www.linkedin.com/in/mielvansleeuwen"></a>
+
             <TreeGreen />
             <Mill />
             <TreeDarkgreen />
@@ -30,6 +37,48 @@
 </div>
 
 <style>
+:root {
+    /* colors */
+    --primary-color: #0A1252;
+    --secondary-color: #C7CCEF;
+
+    /* text-color */
+    --text-color: #FFFFFF;
+
+    /* border-radius */
+    --border-radius-dekstop: 70px;
+    --border-radius-mobile: 45px;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    font-family: 'Garet', sans-serif;
+    font-size: 32px;
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-family: 'Jersey 20', serif;
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.line {
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
 .card {
     position: relative;
     width: 400px;
