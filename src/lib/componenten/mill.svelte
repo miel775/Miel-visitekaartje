@@ -230,6 +230,13 @@
         height: 100px;
         top: -50px;
         right: -265px;
+
+        @media (max-width: 600px) {
+          top: -180px;
+          left: 47%;
+          scale: 2;
+
+    }
     }
 
     .mill {

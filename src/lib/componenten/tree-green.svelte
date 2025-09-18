@@ -23,5 +23,11 @@
         left: 275px;
         z-index: 10;
         scale: 0.5;
+
+        @media (max-width: 600px) {
+          top: 350px;
+          left: 170px;
+          scale: 0.5;
+        }
     }
 </style>

@@ -21,7 +21,7 @@
 
         <div class="card-back">
             <h2 class="miel-text">Miel van Sleeuwen</h2>   
-            <p>Webdeveloper & Designer</p>
+            <p class="job-title">Webdeveloper & Designer</p>
 
             <div class="line"></div>
 
@@ -48,7 +48,7 @@
     --text-color: #FFFFFF;
 
     /* border-radius */
-    --border-radius-dekstop: 70px;
+    --border-radius-desktop: 70px;
     --border-radius-mobile: 45px;
 }
 
@@ -79,12 +79,7 @@ p {
     top: -200px;
 }
 
-.line {
-    display: block;
-    width: 90%;
-    height: 2px;
-    background-color: var(--primary-color);
-}
+
 
 .card {
     position: relative;
@@ -136,16 +131,41 @@ p {
     grid-template-rows: 50% 50%;
 }
 
+.card-front :global(svg:nth-of-type(1)) {
+    @media (max-width: 600px) {
+        margin-bottom: 50px;
+    }
+}
+
 .card-front :global(svg:nth-of-type(2)) {
     grid-column-start: 1;
     grid-row-start: 2;
+
+        @media (max-width: 600px) {
+        margin-bottom: 200px;
+        margin-right: 150px;
+        height: 50px;
+        grid-column-start: 1;
+        grid-row-start: 2;
+
+    }
 }
 
 .card-front :global(svg:nth-of-type(3)) {
     grid-column-start: 2;
     margin-top: 180px;
     margin-right: 250px;
+
+    @media (max-width: 600px) {
+        margin-top: 0px;
+        margin-left: 500px;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        justify-self: center;
+        align-self: center;
+    }
 }
+
 
 .card-back {
     background: var(--secondary-color);
@@ -155,7 +175,33 @@ p {
 
 .miel-text {
     margin-top: 50px;
+
+    @media (max-width: 600px) {
+        margin-top: 0px;
+        font-size: 24px;
+    }
 }
+
+.job-title {
+    margin-bottom: 0px;
+
+    @media (max-width: 600px) {
+        margin-bottom: 225px;
+        font-size: 16px;
+    }
+}
+
+.line {
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: var(--primary-color);
+
+    @media (max-width: 600px) {
+        margin-bottom: 450px;
+    }
+}
+
 
 .socials {
     display: flex;
@@ -163,6 +209,11 @@ p {
     justify-content: flex-start;
     align-items: center;
     margin-top: 15px;
+
+    @media (max-width: 600px) {
+        margin-top: -500px;
+        justify-content: center;
+    }
 }
 
 a {
@@ -170,8 +221,9 @@ a {
     background-color: var(--primary-color);
     height: 32px;
     width: 32px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ico {
