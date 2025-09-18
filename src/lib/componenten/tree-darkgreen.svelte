@@ -18,11 +18,10 @@
 
 <style>
     .tree-darkgreen {
-        width: 50px;
-        height: 50px;
         position: absolute;
-        top: 22px;
-        left: 22px;
-        z-index: 10;
+        top: 190px;
+        left: 350px;
+        z-index: -2;
+        scale: 0.7;
     }
 </style>

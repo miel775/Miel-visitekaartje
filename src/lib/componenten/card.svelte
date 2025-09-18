@@ -20,17 +20,19 @@
         </div>
 
         <div class="card-back">
-            <h2>Miel van Sleeuwen</h2>   
+            <h2 class="miel-text">Miel van Sleeuwen</h2>   
             <p>Webdeveloper & Designer</p>
 
             <div class="line"></div>
 
-            <a href="www.mielvansleeuwen.nl"></a>
-            <a href="www.github.com/miel775"></a>
-            <a href="www.linkedin.com/in/mielvansleeuwen"></a>
+            <div class="socials">
+                <a href="https:/www.mielvansleeuwen.com" class="ico fa-solid fa-globe"></a>
+                <a href="https:/www.github.com/miel775" class="ico fa-brands fa-github"></a>
+                <a href="https:/www.linkedin.com/in/mielvansleeuwen" class="ico fa-brands fa-linkedin"></a>
+            </div>
 
             <TreeGreen />
-            <Mill />
+            <Mill id="mill-overall"/>
             <TreeDarkgreen />
         </div>
     </div>
@@ -72,6 +74,11 @@ p {
     margin-bottom: 1rem;
 }
 
+#mill-overall {
+    position: relative;
+    top: -200px;
+}
+
 .line {
     display: block;
     width: 90%;
@@ -84,10 +91,8 @@ p {
     width: 400px;
     height: 250px;
     perspective: 1000px;
-    border-radius: var(--border-radius-desktop);
 
     @media (max-width: 600px) {
-        border-radius: var(--border-radius-mobile);
         width: 250px;
         height: 400px;
     }
@@ -99,7 +104,6 @@ p {
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.8s;
-    border-radius: var(--border-radius-desktop);
 }
 
 .card:hover .card-inner {
@@ -112,34 +116,35 @@ p {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: var(--border-radius-desktop);
     padding: 1em;
     display: grid;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border-radius: var(--border-radius-desktop);
+
 
     @media (max-width: 600px) {
-        border-radius: var(--border-radius-mobile);
         grid-template-columns: 100%;
         grid-template-rows: 33% 33% 33%;
     }
 }
 
 .card-front {
-    border-radius: var(--border-radius-desktop);
     background: var(--secondary-color);
     grid-template-columns: 60% 40%;
     grid-template-rows: 50% 50%;
 }
 
 .card-front :global(svg:nth-of-type(2)) {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    align-self: center;
-    justify-self: center;
-    width: 80%;
-    height: auto;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.card-front :global(svg:nth-of-type(3)) {
+    grid-column-start: 2;
+    margin-top: 180px;
+    margin-right: 250px;
 }
 
 .card-back {
@@ -147,4 +152,33 @@ p {
     color: var(--primary-color);
     transform: rotateY(180deg);
 }
+
+.miel-text {
+    margin-top: 50px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+a {
+    display: block;
+    background-color: var(--primary-color);
+    height: 32px;
+    width: 32px;
+    display: grid;
+    place-items: center;
+}
+
+.ico {
+    color: var(--secondary-color);
+    font-size: 24px;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
 </style>

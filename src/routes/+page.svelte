@@ -51,11 +51,10 @@
 @keyframes skew {
     /* scaleY with the anchorpoint on the bottom */
     0% {
-        transform: scale(1) ;
-        offset-anchor: bottom;
+        transform: scaleY(1);
     }
     50% {
-        transform: scale(0.8);
+        transform: scaleY(0.8);
     }
 }
 </style>
